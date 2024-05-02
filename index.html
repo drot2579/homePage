@@ -1,0 +1,100 @@
+<!--#region HEAD -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>drot Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<!--endregion -->
+
+<body>
+    <!-- <div class="meta"></div> -->
+
+
+    <nav>
+        <button class="leftMenu">Left Menu</button>
+        <a href="#about">About Me</a>
+        <a href="#reach">Reach Me</a>
+        <button class="links">Top Menu</button>
+        <div class="links close">
+            <a href="#kdz">Rabies Prophylaxis</a>
+            <a href="#tdAlg">Tatanus Prophylaxis</a>
+            <a href="#physicsSimulation">Physics Simulation</a>
+            <a href="#mathGame">Math Game</a>
+            <a href="#esaCalculator">ESA Calculator</a>
+        </div>
+    </nav>
+
+
+    <main>
+
+
+        <article>
+            <h1>My Small Projects</h1>
+
+            <section id="kdz">
+                <h3><a href="https://drot2579.github.io/kdz/" target="_blank">Rabies Profilaxis App</a></h3>
+                <p>Ministry of Heath of Turkey has a rabies guideline booklet that describes approptiate approches for
+                    patients suspected of a rabies virus exposure. Post exposure profilaxis(PEP) is the most important
+                    part. While this booklet has a summary table for PEP as well as an algorithmic diagram, in my
+                    clinical practice I realized that they are not optimized for real life cases and they don't cover
+                    all situations that described in the booklet. I thought that a better and more comprehensive algorithm may be created and it would be even better to have an app that follows that algorithm step by step. So I created this single page app. </p>
+                <p>Main aim of this app is that by answering multiple choice questions one by one to reach the correct
+                    treatment with lowest effort and maximum precision. I also included;</p>
+                <ul>
+                    <li>Vaccine dose dates that calculated for the current date</li>
+                    <li>A calculator that takes weigth of the patient and immunglobulin type(human or horse derived) and
+                        outputs the correct amount to administer</li>
+                    <li>Short notes about current step that toggled with clicking the title</li>
+                    <li>An info popup that has a navbar for easy navigation</li>
+                    <li>A cool animation between steps and sci-fi like theme that may be regarded totally unnecessay (lol)</li>
+                </ul>
+                <p>Content is in Turkish because countries have different guidelines on this topic so it is not
+                    universal but local info. But coding part such as variable names, class names and comments are
+                    mostly in English. </p>
+                <p>App can be opened clicking the title</p>
+            </section>
+
+            <section id="tdAlg">
+                <h3><a href="https://drot2579.github.io/td/" target="_blank">Tetanus profilaxis app</a></h3>
+                <p>Like the rabies app this app takes to the recommended treatment with answering a question in each
+                    step. Rabies prophylaxis is much more complex than this one. This one has a relaxing fade-out-in
+                    animation. Content is in Turkish.</p>
+            </section>
+
+            <section id="physicsSimulation">
+                <h3><a href="https://drot2579.github.io/physicsSimulation/" target="_blank">Basic Physics Simulation</a>
+                </h3>
+                <p>I looked into the canvas tag and I tought I could make a Newton mechanics(F = m.a) simulator. It is
+                    aimed to be realistic calculation-wise, for example an object fall from 80 meters in 4 seconds in
+                    accordance with: <br> X = (1/2)(a.t^2) | | | | | | | a = g = 10 m/(s^2) | | | | | | |  80 = (10/2).(t^2) | | | | | | | 16 = (t^2) | | | | | | | t = 4 </p>
+                </section>
+                
+                <section id="mathGame">
+                    <h3><a href="https://drot2579.github.io/mathGame1/" target="_blank">Basic Math Game</a></h3>
+                    <p>This was my first small project. In each level, the sum of 2 random numbers between a predetermined range is asked and must be answered in the given time limit that counts down on the screen. You can also change the number range and time limit. Scores are saved in local storage so they persist as long as browser data is not cleaned. I also added little animations that activate after some time when game is not being played.</p>
+                    </section>
+                    
+                    <section id="esaCalculator">
+                        <h3><a href="https://drot2579.github.io/esa/" target="_blank">ESA Drug Dose Calculator</a></h3>
+                <p>Erytropoesis Stimulating Agents(ESA) are used for the anemia in chronic renal disease patients. There
+                    are formal guides for planning the treatment. It takes patient anemia level and patient weigh
+                    outputs the doses for 2 different medications. I aimed this to be more interactive and it is
+                    possible to change the each dose and calculate the corresponding weight. (You may wonder what the
+                    weight must be to prescribe a particular dose)</p>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
