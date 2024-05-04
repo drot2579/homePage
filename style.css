@@ -1,247 +1,170 @@
-/*#region ----------------- RESET ------------------  */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-sizing: border-box;
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-a, a:visited {
-    color: inherit;
-    text-decoration: none;
-}
-button, input, select, textarea, label {
-    font-family: inherit;
-    font-size: 1rem;
-}
-/*#endregion ----------------- RESET ------------------  */
-/* ---------- ---------- ---------- -------- ---------- ---------- ---------- */
-/*#region ---------- ----------* MY CONFIG *---------- ---------- ----- */
-*,
-*::before,
-*::after {
-    text-align: center;
-    vertical-align: middle;
-}
-button {
-    transition: 250ms;
-    cursor: pointer;
-    &:hover {
-        filter: brightness(0.95);
-    }
-    &:active {
-        filter: brightness(0.9);
-    }
-}
-table {
-    --hh: 90;
-    --ss: 66%;
-    --ll: 6%;
-    --tbClr1: hsl(var(--hh), var(--ss), calc(100% - var(--ll) * 1));
-    --tbClr2: hsl(var(--hh), var(--ss), calc(100% - var(--ll) * 2));
-    --tbClr3: hsl(var(--hh), var(--ss), calc(100% - var(--ll) * 3));
-    --tbClr4: hsl(var(--hh), var(--ss), calc(100% - var(--ll) * 5));
-    background-color: #444;
-    & td, & th {
-        padding: 0.5rem;
-    }
-    tr:nth-child(odd) {
-        background-color: var(--tbClr1);
-    }
-    tr:nth-child(even) {
-        background-color: var(--tbClr2);
-    }
-    & thead th {
-        background-color: var(--tbClr4);
-    }
-    & tfoot td {
-        background-color: var(--tbClr3);
-    }
-    & tbody tr:hover {
-        filter: brightness(0.8);
-    }
-}
-h6 {
-    font-size: 1.25rem;
-}
-h5 {
-    font-size: 1.50rem;
-}
-h4 {
-    font-size: 1.75rem;
-}
-h3 {
-    font-size: 2.00rem;
-}
-h2 {
-    font-size: 2.25rem;
-}
-h1 {
-    font-size: 2.50rem;
-}
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
-}
-button, input, select, textarea, label {
-    text-transform: capitalize;
-}
 html {
-    font-size: 14px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #e1e1e1;
-    --footerHeight: 8dvh;
-
-    
---sky05:#f0fdfa;
---sky1 :#ccfbf1;
---sky2 :#99f6e4;
---sky3 :#5eead4;
---sky4 :#2dd4bf;
---sky5 :#14b8a6;
---sky6 :#0d9488;
---sky7 :#0f766e;
---sky8 :#115e59;
---sky9 :#134e4a;
---sky95 :#042f2e;
-}
-body {
-    min-height: 100dvh;
-    margin: auto;
-    position: relative;
-
-}
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    width: 100%;
-    height: var(--footerHeight);
-    top: 0;
-    background-color: #ddd;
-    color: black;
-    z-index: 1;
-
-    & button {
-        width: 4rem;
-        height: 2rem;
-    }
-
-    & > a {
-        background-color: #ccc;
-        height: 4dvh;
-        width: 12%;
-        align-content: center;
-        margin: 0 1%;
-    }
-
-    & div.links {
-        overflow: hidden;
-        height: fit-content;
-        padding: 1rem 0;
-        width: 100%;
-        position: absolute;
-        top: var(--footerHeight);
-        background-color: #ccfbf1;
-    
-        &.close {
-            max-height: 0;
-            padding: 0;
-        }
-    
-    }
-
-}
-
-
-main, article, section, div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    --sky05: #f0fdfa;
+    --sky1: #ccfbf1;
+    --sky2: #99f6e4;
+    --sky3: #5eead4;
+    --sky4: #2dd4bf;
+    --sky5: #14b8a6;
+    --sky6: #0d9488;
+    --sky7: #0f766e;
+    --sky8: #115e59;
+    --sky9: #134e4a;
+    --sky95: #042f2e;
+    --leftMenuWidth: 232px;
+    --navHeight: 4rem;
 }
 main {
-    width: min(100%, 1000px);
-    /* height: 100dvh; */
-    background-color: #f8f8f8;
+    width: min(100%, 768px);
+    background-color: #e8e8e8;
 }
-/*#endregion ---------- ----------* MY CONFIG *---------- ---------- ----- */
+body * {
+    /* *For Development */
+    /* border: 1px dotted red; */
+}
 /* ---------- ---------- ---------- -------- ---------- ---------- ---------- */
 /*#region ---------- ----------* MAIN *---------- ---------- ----- */
 main {
-
-    padding: 2dvh;
     & article {
-        padding: 2dvh 2vw;
+        & > h1 {
+            width: 100%;
+            background-color: hsl(0, 0%, 80%);
+        }
         & > section {
-            padding-top: 5dvh;
-            & > p, & > ul, & li {
-                line-height: 1.5;
-                text-align: left;
+            background-color: #f8f8f8;
+            padding: 1rem 0rem 3rem 0rem;
+            margin-bottom: 1.5rem;
+            & a {
+                display: inline-block;
+                text-transform: capitalize;
+                width: 100%;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
-            & ul {
-                padding: 2dvh;
-                & li {
+            & > ul {
+                margin: 0.5rem 0rem 0.5rem 1.5rem;
+                & > li {
+                    text-align: left;
+                    line-height: 1.8;
                     list-style: disc;
                 }
             }
-
-            & p:first-of-type {
-                text-indent: 3rem;
-            }
-
-            & :where(h1,h2,h3,h4,h5,h6) {
-                text-transform: capitalize;
-                padding: 2dvh 0;
+            & p {
+                line-height: 1.5;
+                text-align: left;
+                align-self: start;
+                text-indent: 2.5rem;
             }
         }
     }
+    & article.pads {
+        & > ul {
+            padding: 0 1rem;
+        }
+        & p {
+            padding: 0.5rem 1rem;
+        }
+        & code {
+            padding: 0.5rem 1rem;
+        }
+    }
+}
+nav {
+    height: var(--navHeight);
+    width: 100%;
+    color: black;
+    flex-direction: row;
+    top: 0;
+    position: sticky;
+    background-color: #999;
+    &.topMenuButton {
+        background-color: #aaa;
+    }
+    & .topMenu {
+        width: 80%;
+        column-gap: 10%;
+        color: #fafafa;
+        & :hover {
+            text-decoration: underline;
+        }
+    }
+    & button {
+        width: 4rem;
+        height: 2rem;
+        position: absolute;
+        background-color: #bbb;
+        &.leftMenuButton {
+            height: 100%;
+            left: 0rem;
+        }
+        &.topMenuButton {
+            height: 100%;
+            right: 0rem;
+        }
+    }
+    &.leftMenu {
+        background-color: #bbb;
+        position: fixed;
+        left: 0;
+        width: var(--leftMenuWidth);
+        height: calc(100% - var(--navHeight));
+        top: var(--navHeight);
+        & a {
+            margin: 0.5rem 0rem;
+            &:hover {
+                color: #fafafa;
+            }
+        }
+    }
+}
+.leftMenuCurtain {
+    background-color: #00000099;
+    position: fixed;
+    right: 0;
+    width: calc(100% - var(--leftMenuWidth));
+    height: calc(100% - var(--navHeight));
+    top: var(--navHeight);
+}
+.leftMenuPlaceholder {
+    width: 0;
 }
 /*#endregion ---------- ----------* MAIN *---------- ---------- ----- */
 /* ---------- ---------- ---------- -------- ---------- ---------- ---------- */
 /*#region ---------- ----------* MEDIA *---------- ---------- ----- */
-.meta::before {
-    position: fixed;
-    right: 0;
-    top: 0;
-    opacity: 0.5;
-    color: black;
-    background-color: white;
-    content: "width < 480px - 14px";
-    /* display: none; */
-}
-@media screen and (width > 480px) {
-    .meta::before {
-        content: "width > 480px - 15px";
-    }
-}
 @media screen and (width > 720px) {
-    html {
-        font-size: 16px;
+    nav .topMenu, nav .topMenu.shut {
+        display: flex;
+        flex-direction: row;
     }
-    .meta::before {
-        content: "width > 720px - 16px";
+    nav .topMenuButton {
+        display: none;
+    }
+    main article.pads {
+        background-color: #14b8a6;
+        & ul {
+            padding: 0 2rem;
+        }
+        & p {
+            padding: 0.5rem 2rem;
+        }
+        & code {
+            padding: 0.5rem 2rem;
+        }
     }
 }
-@media screen and (width > 960px) {
-    html {
-        font-size: 17px;
-    }
-    .meta::before {
-        content: "width > 960px - 17px";
-    }
-}
+@media screen and (width > 1000px) {}
 @media screen and (width > 1200px) {
-    html {
-        font-size: 18px;
+    .leftMenu, .leftMenu.swiped {
+        display: flex;
     }
-    .meta::before {
-        content: "width > 1200px - 18px";
+    .leftMenuButton {
+        display: none;
+    }
+    .leftMenuPlaceholder {
+        width: var(--leftMenuWidth) !important;
     }
 }
 /*#endregion ---------- ----------* MEDIA *---------- ---------- ----- */
@@ -253,8 +176,10 @@ main {
 .row {
     flex-direction: row;
 }
-/*#endregion ---------- ----------* UTILS *---------- ---------- ----- */
-body * {
-    /* *For Development */
-    border: 1px dotted red;
+.swiped {
+    display: none;
 }
+.shut {
+    display: none;
+}
+/*#endregion ---------- ----------* UTILS *---------- ---------- ----- */
