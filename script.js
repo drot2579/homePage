@@ -1,30 +1,30 @@
 const elMap = [
-    ["btnLinks","button.links"],
-    ["links","div.links"],
-    ["leftMenu",".leftMenu"],
-    ["leftBarButton",".leftBarButton"],
-    ["leftMenuCurtain",".leftMenuCurtain"],
-    ["topLinks",".topLinks"],
-    ["topLinksButton",".topLinksButton"],
+["leftCol",".leftCol"],
+["buttonLeftCol",".buttonLeftCol"],
+
+["linkProjects",".linkProjects"],
+["linkAbout",".linkAbout"],
+["linkContact",".linkContact"],
 
 ]
 const el = Object.fromEntries(elMap.map( ([name,selector]) => [name ,document.querySelector(selector)] ))
 const toggleHidden = (element) => {element.classList.toggle("hidden")}
 
-// el.btnLinks.addEventListener("click", (e) => {
-//     el.links.classList.toggle("close")
-// })
 
-// el.leftBarButton.addEventListener("click", (e) => {
-//     el.leftMenu.classList.toggle("swiped")
-//     el.leftMenuCurtain.classList.toggle("swiped")
-// })
+el.buttonLeftCol.addEventListener("click", (e) => {
+    el.leftCol.classList.toggle("show")
+})
 
-// el.leftMenuCurtain.addEventListener("click", (e) => {
-//     el.leftMenuCurtain.classList.add("swiped")
-//     el.leftMenu.classList.add("swiped")
-// })
 
-// el.topLinksButton.addEventListener("click", (e) => {
-//     el.topLinks.classList.toggle("shut")
-// })
+document.body.addEventListener("click", (e) => {
+    if (e.target !== el.leftCol  && e.target !== el.buttonLeftCol ) {
+        el.leftCol.classList.remove("show")
+    }
+  
+})
+
+document.querySelectorAll("img").forEach((img) => {
+    img.addEventListener("click", (e) => {
+        e.target.classList.toggle("largeImg")
+    })
+})
