@@ -1,137 +1,186 @@
 <!--#region HEAD -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>drot Personal Site</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <!--endregion -->
-
 <body>
-
-    <nav class="top">
-        <button class="leftMenuButton">left</button>
-        <button class="topMenuButton">top</button>
-
-        <div class="topMenu shut">
-            <a href="" class="menu"><span>Projects</span></a>
-            <a href="" class="menu"><span>About</span></a>
-            <a href="" class="menu"><span>Contact</span></a>
-        </div>
-
-    </nav>
-
-    <nav class="leftMenu projects swiped">
-        <div class="links">
-            <a href="#kdz">Rabies Prophylaxis</a>
-            <a href="#tdAlg">Tetanus Prophylaxis</a>
-            <a href="#physicsSimulation">Physics Simulation</a>
-            <a href="#mathGame">Math Game</a>
-            <a href="#esaCalculator">ESA Calculator</a>
-        </div>
-    </nav>
-
-    <div class="leftMenuCurtain swiped"></div>
-
-    <nav class="right hidden"></nav>
-
-    <!-- <div class="leftMenuPlaceholder"></div> -->
     <main>
-
-        <div class="projects page row">
-
-            <article class="projects pads">
-                <h2>My Small Projects</h2>
-
-                <section id="kdz">
+        <article class="hero">
+            <div class="heroImage">
+            </div>
+            <div class="heroText">
+                <h2>drot</h2>
+                <p>my portfolio</p>
+            </div>
+        </article>
+        <nav class="topNav">
+            <a href="#">projects</a>
+            <a href="#">about</a>
+            <a href="#">contact</a>
+        </nav>
+        <article class="projects">
+            <section class="leftCol">
+                <div class="pageTitles">
+                    <a href="#kdz">Rabies Prophylaxis</a>
+                    <a href="#tdAlg">Tetanus Prophylaxis</a>
+                    <a href="#physicsSimulation">Physics Simulation</a>
+                    <a href="#mathGame">Math Game</a>
+                    <a href="#esaCalculator">ESA Calculator</a>
+                </div>
+            </section>
+            <section class="midCol">
+                <h1>My Projects</h1>
+                <div class="kdz project" id="kdz">
                     <h3><a href="https://drot2579.github.io/kdz/" target="_blank">Rabies Profilaxis App</a></h3>
+                    <a class="imgLink" href="https://drot2579.github.io/kdz/" target="_blank">
+                        <img src="./src/ss_app_kdz.png" alt="Rabies algorithm app screenshot">
+                    </a>
+                    <figcaption>The app can be opened by clicking the title or this image</figcaption>
 
+                    <!-- <p></p> -->
                     <p>Ministry of Heath of Turkey has a rabies guideline booklet that describes approptiate approches
-                        for
-                        patients suspected of a rabies virus exposure. Post exposure profilaxis(PEP) is the most
-                        important
-                        part. While this booklet has a summary table for PEP as well as an algorithmic diagram, in my
-                        clinical practice I realized that they are not optimized for real life cases and they don't
-                        cover
-                        all situations that described in the booklet. I thought that a better and more comprehensive
-                        algorithm may be created and it would be even better to have an app that follows that algorithm
-                        step by step. So I created this single page app. </p>
+                        for patients suspected of a rabies virus exposure. Post exposure profilaxis(PEP) is the most
+                        important part. While this booklet has a summary table for PEP as well as an algorithmic
+                        diagram, in my clinical practice I realized that they are not optimized for real life cases and
+                        they don't cover all situations that described in the booklet. I thought that a better and more
+                        comprehensive algorithm may be created and it would be even better to have an app that follows
+                        that algorithm step by step. So I created this single page app. </p>
                     <p>Main aim of this app is that by answering multiple choice questions one by one to reach the
-                        correct
-                        treatment with lowest effort and maximum precision. I also included;</p>
+                        correct treatment with lowest effort and maximum precision. I also included;</p>
                     <ul>
                         <li>Vaccine dose dates that calculated for the current date</li>
                         <li>A calculator that takes weigth of the patient and immunglobulin type(human or horse derived)
-                            and
-                            outputs the correct amount to administer</li>
+                            and outputs the correct amount to administer</li>
                         <li>Short notes about current step that toggled with clicking the title</li>
                         <li>An info popup that has a navbar for easy navigation</li>
-                        <li>A cool animation between steps and sci-fi like theme that may be regarded totally unnecessay
-                            (lol)</li>
+                        <li>A cool animation between steps and sci-fi like theme that may be regarded totally
+                            unnecessary (lol)</li>
                     </ul>
                     <p>Content is in Turkish because countries have different guidelines on this topic so it is not
                         universal but local info. But coding part such as variable names, class names and comments are
                         mostly in English. </p>
-                    <p>The app can be opened by clicking the title.</p>
-
-                </section>
-
-                <section id="tdAlg">
-
-                    <h3><a href="https://drot2579.github.io/td/" target="_blank">Tetanus profilaxis app</a></h3>
+                </div>
+                <div class="td project" id="tdAlg">
+                    <h3><a href="https://drot2579.github.io/td/" target="_blank">Tetanus Profilaxis App</a></h3>
+                    <a class="imgLink" href="https://drot2579.github.io/td/" target="_blank">
+                        <img src="./src/ss_app_td.png" alt="Tetanus algorithm app screenshot">
+                    </a>
                     <p>Like the rabies app this app takes to the recommended treatment with answering a question in each
                         step. Rabies prophylaxis is much more complex than this one. This one has a relaxing fade-out-in
                         animation. Content is in Turkish.</p>
-                </section>
-
-                <section id="physicsSimulation">
-                    <h3><a href="https://drot2579.github.io/physicsSimulation/" target="_blank">Very Basic Physics
-                            Simulation</a></h3>
-                    <p>I looked into the canvas tag and I tought I could make a Newton mechanics(F = m.a) simulator. It
-                        is
-                        aimed to be realistic calculation-wise, for example an object fall from 80 meters in 4 seconds
-                        in
-                        accordance with:</p>
-                    <code> X = (1/2)(a.t^2) |--| a = g = 10 m/(s^2)  </code>
-                    <code>  80 = (10/2).(t^2) |--| 16 = (t^2) ; t = 4 </code>
-                </section>
-
-                <section id="mathGame">
-
+                </div>
+                <div class="mathGame project" id="mathGame">
                     <h3><a href="https://drot2579.github.io/mathGame1/" target="_blank">Basic Math Game</a></h3>
+                    <a class="imgLink" href="https://drot2579.github.io/mathGame1/" target="_blank">
+                        <img src="./src/ss_app_mathGame.png" alt="Math Game screenshot">
+                    </a>
                     <p>This was my first small project. In each level, the sum of 2 random numbers between a
                         predetermined range is asked and must be answered in the given time limit that counts down on
                         the screen. You can also change the number range and time limit. Scores are saved in local
                         storage so they persist as long as browser data is not cleaned. I also added little animations
-                        that activate after some time when game is not being played.</p>
-                </section>
-
-                <section id="esaCalculator">
-
+                        that activate after some time when game is not being played. </p>
+                </div>
+                <div class="esaCalculator project" id="esaCalculator">
                     <h3><a href="https://drot2579.github.io/esa/" target="_blank">ESA Drug Dose Calculator</a></h3>
+                    <a class="imgLink" href="https://drot2579.github.io/esa/" target="_blank">
+                        <img src="./src/ss_app_esa.png" alt="ESA dose calculator screenshot">
+                    </a>
                     <p>Erytropoesis Stimulating Agents(ESA) are used for the anemia in chronic renal disease patients.
-                        There
-                        are formal guides for planning the treatment. It takes patient anemia level and patient weigh
-                        outputs the doses for 2 different medications. I aimed this to be more interactive and it is
-                        possible to change the each dose and calculate the corresponding weight. (You may wonder what
-                        the
-                        weight must be to prescribe a particular dose)</p>
-                </section>
-
-            </article>
-
-        </div>
-
+                        There are formal guides for planning the treatment. It takes patient anemia level and patient
+                        weigh outputs the doses for 2 different medications. I aimed this to be more interactive and it
+                        is possible to change the each dose and calculate the corresponding weight. (You may wonder what
+                        the weight must be to prescribe a particular dose)</p>
+                </div>
+                <div class="physicsSimulation project" id="physicsSimulation">
+                    <h3><a href="https://drot2579.github.io/physicsSimulation/" target="_blank"> 
+                        Basic Physics Simulation </a></h3>
+                    <a class="imgLink" href="https://drot2579.github.io/physicsSimulation/" target="_blank">
+                        <img src="./src/ss_app_physicsSim.png" alt="Physics simulator app screenshot">
+                    </a>
+                    <p>I looked into the canvas tag and I tought I could make a Newton mechanics(F = m.a) simulator. It
+                        is aimed to be realistic calculation-wise, for example an object fall from 80 meters in 4
+                        seconds in accordance with:</p>
+                    <code> X = (1/2)*(a.t^2) ; a = g = 10 m/(s^2)  </code>
+                    <code>  80 = (10/2)*(t^2) ; 16 = (t^2) ; t = 4 </code>
+                    <p>Not compatible with mobile devices. Uses keyboard input.</p>
+                </div>
+            </section>
+            <section class="rightCol">
+            </section>
+        </article>
+        <article class="about">
+        </article>
+        <article class="contact">
+        </article>
     </main>
 
     <footer></footer>
-
 </body>
-
 </html>
+<!-- 
+
+        <nav>
+        <button class="leftBarButton">left</button>
+
+        <div class="topLinks">
+            <a href=""><span>Projects</span></a>
+            <a href=""><span>About</span></a>
+            <a href=""><span>Contact</span></a>
+        </div>
+
+        <button class="topLinksButton">top</button>
+    </nav>
+
+
+    <main>
+
+        <section class="leftBar">
+
+        </section>
+
+        <section class="pages">
+        
+            <div class="projectsPage">
+
+
+                <article class="projects page">
+                    <h1>My Small Projects</h1>
+
+
+
+
+                    </section>
+
+                    
+
+  
+
+
+        
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <section class="rightBar">
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="">
+            <P>Footer Content</P>
+        </div>
+    </footer>
+ -->
