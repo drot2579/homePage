@@ -67,41 +67,13 @@ h5 {
 h6 {
     font-size: 1.25rem;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+*:where(h1,h2,h3,h4,h5,h6) {
     font-weight: 400;
     padding: 0.5em 0;
-    text-transform: capitalize;
-}
-button,
-input,
-select,
-textarea,
-label,a {
-    text-transform: capitalize;
 }
 body {
     min-height: 100dvh;
     margin: auto;
-}
-main,
-article,
-section,
-div,
-nav,
-footer {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    /* margin: auto;  */
-}
-nav, footer {
-    /* flex-direction: row; */
 }
 img {
     max-width: 100%;
@@ -111,7 +83,7 @@ ul {
     list-style: none;
 }
 a,
-a:visited {
+a:visited, a:hover {
     text-decoration: none;
     color: inherit;
 }

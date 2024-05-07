@@ -1,3 +1,5 @@
+const toggleHidden = (element) => {element.classList.toggle("hidden")}
+
 const elMap = [
 ["leftCol",".leftCol"],
 ["buttonLeftCol",".buttonLeftCol"],
@@ -8,7 +10,11 @@ const elMap = [
 
 ]
 const el = Object.fromEntries(elMap.map( ([name,selector]) => [name ,document.querySelector(selector)] ))
-const toggleHidden = (element) => {element.classList.toggle("hidden")}
+const elsMap = [
+["img","img"],
+
+]
+const els = Object.fromEntries(elsMap.map( ([name,selector]) => [name ,document.querySelectorAll(selector)] ))
 
 
 el.buttonLeftCol.addEventListener("click", (e) => {
@@ -23,8 +29,13 @@ document.body.addEventListener("click", (e) => {
   
 })
 
-document.querySelectorAll("img").forEach((img) => {
+els.img.forEach((img) => {
     img.addEventListener("click", (e) => {
         e.target.classList.toggle("largeImg")
+    })
+})
+document.body.addEventListener("click", (e) => {
+    els.img.forEach((img) => {
+        if(e.target !== img){img.classList.remove("largeImg")}
     })
 })

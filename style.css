@@ -2,13 +2,10 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f1f1f1;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255, 199, 138) #eee;
 }
-a {
-    display: inline-block;
-}
-a:hover {
-    text-decoration: underline;
-}
+
 figcaption {
     text-align: center;
     color: #555
@@ -59,7 +56,7 @@ background-attachment: fixed;
     height: 4rem;
     display: flex;
     position: sticky;
-    z-index: 1;
+    z-index: 4;
     top: 0;
     align-items: center;
     justify-content: center;
@@ -80,12 +77,13 @@ background-attachment: fixed;
         margin: 0 1vw;
         &:hover {
             background-color: #ddd;
-            text-decoration: none;
+            /* text-decoration: none; */
         }
     }
 }
 .buttonLeftCol {
     display: none;
+    font-size: 2rem;
 }
 .projects {
     margin: auto;
@@ -105,9 +103,12 @@ background-attachment: fixed;
         padding: 2px;
         border: 2px solid black;
         transition: 300ms;
+        filter: opacity(0.5);
+        
+        &.largeImg {
+            width: 90%;
+            filter: none;
 
-            &.largeImg {
-                width: 90%;
             }
     }
     & .project {
@@ -115,7 +116,6 @@ background-attachment: fixed;
         margin-bottom: 2vh;
         padding: 5vh 2vw;
         padding-bottom: 8vh;
-        background-color: #fafafadd;
         background-color: #fafafae8;
     }
     & ul {
@@ -126,16 +126,7 @@ background-attachment: fixed;
         padding: 2dvh 1rem;
         display: flex;
         flex-direction: column;
-        &.show {
-            display: unset;
-            position: sticky;
-            width: 40%;
-            height: 100vh;
-            left: 0;
-            top: 4rem;
-            background-color: #ddd;
-            z-index: 3;
-        }
+
         & .pageTitles {
             position: sticky;
             z-index: 1;
@@ -150,7 +141,6 @@ background-attachment: fixed;
                 padding: 1rem 0.25rem;
                 transition:  200ms;
                 &:hover {
-                    /* color: orange; */
                     color: orange;
                     text-decoration: none;
                     background-color: #666;
@@ -161,6 +151,9 @@ background-attachment: fixed;
     & .rightCol {
     }
     & .midCol {
+        & a:hover {
+            text-decoration: underline;
+        }
         padding: 0 4vw;
         & p {
             text-indent: 2.5rem;
@@ -187,14 +180,22 @@ background-attachment: fixed;
 }
 
 .contact {
-    & span {
-        display: inline-block;
-        width: 4rem;
-        font-weight: 600;
-        & + span {
-                font-weight: 400;
+
+    & .contactLine {
+        margin: 0.5rem 0;
+        & b:first-of-type {
+            width: 5rem;
+            display: inline-block;
+        }
+        & span {
+            &::before {
+                content: ":";
+                padding: 0 0.25rem;
+                font-weight: 600;
             }
         }
+    }
+    
     }
 
 
@@ -245,5 +246,37 @@ footer {
     .heroImage {
         background-position:bottom 55% left 20%;
     }
+    .leftCol.show {
+        display: unset;
+        position: sticky;
+        width: min(40%,240px);
+        /* width: max(196px,40%); */
+        height: 100vh;
+        left: 0;
+        top: 4rem;
+        background-color: #ddd;
+        z-index: 3;
+    }
 }
-@media screen and (width < 600px) {}
+@media screen and (width < 600px) {
+    html {
+        font-size: 15px;
+    }
+    .project {
+        background-color: #fafafacc !important;
+    }
+    .projects {
+        background-position: center !important;
+    }
+    .midCol {
+        padding: 0 !important;
+    }
+    .leftCol {
+        padding: 0 !important;
+        & a {
+            width: 100% !important;
+        }
+
+    }
+    
+}
