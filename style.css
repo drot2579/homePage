@@ -5,7 +5,6 @@ html {
     scrollbar-width: thin;
     scrollbar-color: rgb(255, 199, 138) #eee;
 }
-
 figcaption {
     text-align: center;
     color: #555
@@ -33,24 +32,17 @@ figcaption {
         line-height: 0.8;
         color: #ff8400;
         color: #222;
-
     }
     & p {
-        /* margin-left: 30px; */
         color: #ff911c;
         color: #444;
         font-size: 2rem;
     }
 }
-body * {
-    /* border: 1px dotted; */
-}
 main {
-/* background: linear-gradient(0deg,#fffc , #fffc, #fffc ,#fffc), url("./src/pexels-itsehsanh-18765298.jpg");     */
-background: linear-gradient(90deg,#fffd 0%,#fffd 10% , #fff8 ,#fff9), url("./src/pexels-itsehsanh-18765298.jpg");    
-background-attachment: fixed;
+    background: linear-gradient(90deg, #fffd 0%, #fffd 10%, #fff8, #fff9), url("./src/pexels-itsehsanh-18765298.jpg");
+    background-attachment: fixed;
 }
-
 .topNav {
     background-color: #f1f1f1;
     height: 4rem;
@@ -77,7 +69,6 @@ background-attachment: fixed;
         margin: 0 1vw;
         &:hover {
             background-color: #ddd;
-            /* text-decoration: none; */
         }
     }
 }
@@ -104,29 +95,28 @@ background-attachment: fixed;
         border: 2px solid black;
         transition: 300ms;
         filter: opacity(0.5);
-        
         &.largeImg {
             width: 90%;
             filter: none;
-
-            }
+        }
     }
     & .project {
         position: relative;
-        margin-bottom: 2vh;
+        margin-bottom: 8vh;
         padding: 5vh 2vw;
         padding-bottom: 8vh;
-        background-color: #fafafae8;
+        background-color: #fafafa;
     }
     & ul {
         list-style: disc;
         margin: 0.5rem 2rem;
     }
     & .leftCol {
-        padding: 2dvh 1rem;
+        padding: 2rem 1rem;
+        margin-bottom: 3rem;
+        margin-top: 20dvh;
         display: flex;
         flex-direction: column;
-
         & .pageTitles {
             position: sticky;
             z-index: 1;
@@ -139,7 +129,7 @@ background-attachment: fixed;
                 width: 90%;
                 min-width: 4rem;
                 padding: 1rem 0.25rem;
-                transition:  200ms;
+                transition: 200ms;
                 &:hover {
                     color: orange;
                     text-decoration: none;
@@ -148,8 +138,7 @@ background-attachment: fixed;
             }
         }
     }
-    & .rightCol {
-    }
+    & .rightCol {}
     & .midCol {
         & a:hover {
             text-decoration: underline;
@@ -178,9 +167,7 @@ background-attachment: fixed;
     flex-direction: column;
     justify-content: space-evenly;
 }
-
 .contact {
-
     & .contactLine {
         margin: 0.5rem 0;
         & b:first-of-type {
@@ -195,10 +182,7 @@ background-attachment: fixed;
             }
         }
     }
-    
-    }
-
-
+}
 footer {
     background-color: #eee;
     height: 50vh;
@@ -244,17 +228,16 @@ footer {
         display: unset;
     }
     .heroImage {
-        background-position:bottom 55% left 20%;
+        background-position: bottom 55% left 20%;
     }
     .leftCol.show {
         display: unset;
         position: sticky;
-        width: min(40%,240px);
-        /* width: max(196px,40%); */
+        width: min(40%, 240px);
         height: 100vh;
         left: 0;
         top: 4rem;
-        background-color: #ddd;
+        background-color: #f4f4f4;
         z-index: 3;
     }
 }
@@ -263,7 +246,7 @@ footer {
         font-size: 15px;
     }
     .project {
-        background-color: #fafafacc !important;
+        background-color: #fafafa !important;
     }
     .projects {
         background-position: center !important;
@@ -276,7 +259,8 @@ footer {
         & a {
             width: 100% !important;
         }
-
     }
-    
+}
+body * {
+    /* border: 1px dotted; */
 }
