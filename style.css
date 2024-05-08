@@ -3,9 +3,7 @@ html {
     background-color: #f1f1f1;
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: rgb(255, 199, 138) #eee;
 }
-
 figcaption {
     text-align: center;
     color: #555
@@ -15,7 +13,8 @@ figcaption {
     background: linear-gradient(0deg, #f1f1f1, #f1f1f125),
         linear-gradient(90deg, #f1f1f1, #f1f1f125),
         url("./src/pexels-itsehsanh-18765298.jpg") fixed;
-    height: calc(100vh - 4rem);
+    height: 100dvh;
+    /* height: calc(100vh - 4rem); */
     position: relative;
 }
 .heroText {
@@ -33,7 +32,6 @@ figcaption {
         line-height: 0.8;
         color: #ff8400;
         color: #222;
-
     }
     & p {
         /* margin-left: 30px; */
@@ -46,12 +44,11 @@ body * {
     /* border: 1px dotted; */
 }
 main {
-/* background: linear-gradient(0deg,#fffc , #fffc, #fffc ,#fffc), url("./src/pexels-itsehsanh-18765298.jpg");     */
-background: linear-gradient(90deg,#fffd 0%,#fffd 10% , #fff8 ,#fff9), url("./src/pexels-itsehsanh-18765298.jpg");    
-background-attachment: fixed;
+    /* background: linear-gradient(90deg, #fffd 0%, #fffd 10%, #fff8, #fff9),
+        url("./src/pexels-itsehsanh-18765298.jpg");
+    background-attachment: fixed; */
 }
-
-.topNav {
+/* .topNav {
     background-color: #f1f1f1;
     height: 4rem;
     display: flex;
@@ -77,96 +74,167 @@ background-attachment: fixed;
         margin: 0 1vw;
         &:hover {
             background-color: #ddd;
-            /* text-decoration: none; */
         }
     }
 }
-.buttonLeftCol {
+.buttonLeftNav {
     display: none;
     font-size: 2rem;
+} */
+/* .projects {} */
+code {
+    display: inline-block;
+    /* border: 1px red solid; */
+    padding: 0.25rem 1rem;
 }
 .projects {
-    margin: auto;
-    display: grid;
-    width: 100%;
-    grid-template-columns: minmax(240px, 1fr) minmax(400px, 1000px) minmax(0, 1fr);
-    & :where(h1, h2, h3, h4, h5, h6) {
-        margin-bottom: 1rem;
-    }
-    & img {
-        margin: 0rem auto;
-        margin-top: 2rem;
-        display: block;
-        width: 8rem;
-        max-height: 100%;
-        max-width: 100%;
-        padding: 2px;
-        border: 2px solid black;
-        transition: 300ms;
-        filter: opacity(0.5);
-        
-        &.largeImg {
-            width: 90%;
-            filter: none;
 
-            }
+    /* max-width: 96%; */
+    padding: 1rem;
+    gap: 1rem;
+    /* display: flex; */
+    display: flex;
+    flex-wrap: wrap;
+    border: 8px #405060 solid;
+    margin: auto;
+
+}
+.projects > * {
+    scrollbar-width: thin;
+    border: #333 solid 10px;
+    border-collapse: collapse;
+    padding: 1rem 2%;
+    & :where(h1, h2, h3) {
+        text-decoration: underline;
+        line-height: 1;
     }
-    & .project {
-        position: relative;
+    margin: 0.5rem;
+
+    display: inline-block;
+    min-width: max(240px,20%);
+}
+.titleMyProjects {
+width: 85%;
+height: 10rem;
+background-color: #222;
+    color: #f1f1f1;
+    font-size: 5rem;
+    line-height: 1.1;
+    box-shadow: #333 0px 0px 16px 8px;
+
+
+}
+.project.kdz {
+    width: 70%;
+    
+    background-color: hsl(10, 100%, 77%);
+    scrollbar-color: hsl(10, 100%, 60%) #444;
+}
+.project.mathGame {
+    
+    width: 23%;
+    
+    background-color: hsl(60, 100%, 70%);
+    scrollbar-color: hsl(60, 100%, 60%) #444;
+}
+.project.td {
+    
+    width: 40%;
+    
+    background-color: hsl(230, 100%, 77%);
+    scrollbar-color: hsl(230, 100%, 60%) #444;
+}
+.project.listApp {
+    width: 20%;
+    
+    background-color: hsl(70, 100%, 77%);
+    scrollbar-color: hsl(70, 100%, 60%) #444;
+}
+.project.clickingGame {
+    width: 30%;
+    
+    background-color: hsl(40, 100%, 77%);
+    scrollbar-color: hsl(40, 100%, 60%) #444;
+} 
+.project.esaCalculator {
+    width: 45%;
+    
+    background-color: hsl(110, 100%, 77%);
+    scrollbar-color: hsl(110, 100%, 60%) #444;
+}
+.project.physicsSimulation {
+    width: 45%;
+    
+    background-color: hsl(170, 100%, 77%);
+    scrollbar-color: hsl(170, 100%, 60%) #444;
+}
+
+
+/* 
+*/
+& img {
+    /* margin: 0rem auto; */
+    /* margin-top: 2rem; */
+    /* display: block; */
+    /* width: 8rem; */
+    /* max-height: 100%; */
+    max-width: 280px;
+    max-height: 64px;
+    margin: auto;
+    display: block;
+    margin-top: 2rem;
+    /* padding: 2px; */
+    /* border: 2px solid black; */
+    /* transition: 300ms; */
+    /* filter: opacity(0.5); */
+    &.largeImg {
+        width: 90%;
+        filter: none;
+    }
+}
+& .project {
+    /* position: relative;
         margin-bottom: 2vh;
         padding: 5vh 2vw;
-        padding-bottom: 8vh;
-        background-color: #fafafae8;
-    }
-    & ul {
-        list-style: disc;
-        margin: 0.5rem 2rem;
-    }
-    & .leftCol {
-        padding: 2dvh 1rem;
-        display: flex;
-        flex-direction: column;
-
-        & .pageTitles {
-            position: sticky;
-            z-index: 1;
-            top: 30%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #000;
-            & a {
-                width: 90%;
-                min-width: 4rem;
-                padding: 1rem 0.25rem;
-                transition:  200ms;
-                &:hover {
-                    color: orange;
-                    text-decoration: none;
-                    background-color: #666;
-                }
-            }
-        }
-    }
-    & .rightCol {
-    }
-    & .midCol {
-        & a:hover {
-            text-decoration: underline;
-        }
-        padding: 0 4vw;
-        & p {
-            text-indent: 2.5rem;
-            margin: 0.5rem;
+        padding-bottom: 8vh; */
+    /* background-color: #fafafae8;
+        border: tomato 2px solid; */
+}
+& ul {
+    list-style: disc;
+    margin: 0.5rem 2rem;
+}
+& .leftNav {
+    padding: 2dvh 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.pageTitles {
+    position: sticky;
+    z-index: 1;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    & a {
+        width: 90%;
+        min-width: 4rem;
+        padding: 1rem 0.25rem;
+        transition: 200ms;
+        &:hover {
+            color: orange;
+            text-decoration: none;
+            background-color: #666;
         }
     }
 }
-.titleMyProjects {
+/* .titleMyProjects {
     text-align: center;
     margin-top: 2rem;
     padding: 3rem;
     background-color: #ccce;
-}
+} */
 .contact, .about {
     margin: 10vh auto;
     width: min(95%, 800px);
@@ -178,9 +246,7 @@ background-attachment: fixed;
     flex-direction: column;
     justify-content: space-evenly;
 }
-
 .contact {
-
     & .contactLine {
         margin: 0.5rem 0;
         & b:first-of-type {
@@ -195,11 +261,8 @@ background-attachment: fixed;
             }
         }
     }
-    
-    }
-
-
-footer {
+}
+/* footer {
     background-color: #eee;
     height: 50vh;
     width: min(98%, 1400ps);
@@ -216,67 +279,8 @@ footer {
     width: 2px;
     height: 80%;
     border: none;
-}
-@media screen and (width < 1600px) {
-    .projects {
-        grid-template-columns: minmax(240px, 1fr) minmax(400px, 880px) minmax(0, 1fr);
-    }
-}
-@media screen and (width < 1000px) {
-    .projects {
-        grid-template-columns: 240px auto;
-    }
-    .projects .rightCol {
-        display: none;
-    }
-    .buttonRightCol {
-        display: unset;
-    }
-}
-@media screen and (width < 800px) {
-    .projects {
-        grid-template-columns: 1fr;
-    }
-    .projects .leftCol {
-        display: none;
-    }
-    .buttonLeftCol {
-        display: unset;
-    }
-    .heroImage {
-        background-position:bottom 55% left 20%;
-    }
-    .leftCol.show {
-        display: unset;
-        position: sticky;
-        width: min(40%,240px);
-        /* width: max(196px,40%); */
-        height: 100vh;
-        left: 0;
-        top: 4rem;
-        background-color: #ddd;
-        z-index: 3;
-    }
-}
-@media screen and (width < 600px) {
-    html {
-        font-size: 15px;
-    }
-    .project {
-        background-color: #fafafacc !important;
-    }
-    .projects {
-        background-position: center !important;
-    }
-    .midCol {
-        padding: 0 !important;
-    }
-    .leftCol {
-        padding: 0 !important;
-        & a {
-            width: 100% !important;
-        }
-
-    }
-    
-}
+} */
+@media screen and (width < 1600px) {}
+@media screen and (width < 1000px) {}
+@media screen and (width < 800px) {}
+@media screen and (width < 600px) {}

@@ -1,8 +1,8 @@
 const toggleHidden = (element) => {element.classList.toggle("hidden")}
 
 const elMap = [
-["leftCol",".leftCol"],
-["buttonLeftCol",".buttonLeftCol"],
+["leftNav",".leftNav"],
+["buttonLeftNav",".buttonLeftNav"],
 
 ["linkProjects",".linkProjects"],
 ["linkAbout",".linkAbout"],
@@ -17,14 +17,14 @@ const elsMap = [
 const els = Object.fromEntries(elsMap.map( ([name,selector]) => [name ,document.querySelectorAll(selector)] ))
 
 
-el.buttonLeftCol.addEventListener("click", (e) => {
-    el.leftCol.classList.toggle("show")
+el.buttonLeftNav.addEventListener("click", (e) => {
+    el.leftNav.classList.toggle("show")
 })
 
 
 document.body.addEventListener("click", (e) => {
-    if (e.target !== el.leftCol  && e.target !== el.buttonLeftCol ) {
-        el.leftCol.classList.remove("show")
+    if (e.target !== el.leftNav  && e.target !== el.buttonLeftNav ) {
+        el.leftNav.classList.remove("show")
     }
   
 })

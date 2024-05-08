@@ -8,44 +8,41 @@
     <title>drot Personal Site</title>
     <link rel="stylesheet" href="default.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
 </head>
 <!--endregion -->
 <body>
-    <header class="hero">
-        <div class="heroImage">
-        </div>
+    <!-- <header class="hero">
+        <div class="heroImage"></div>
         <section class="heroText">
             <h2>drot</h2>
             <p>my portfolio</p>
         </section>
-    </header>
-    <nav class="topNav">
-        <button class="buttonLeftCol">&vellip;</button>
+    </header> -->
+    <!-- <nav class="topNav">
+        <button class="buttonLeftNav">&vellip;</button>
         <div class="topLinks">
             <a class="linkProjects" href="#projects">projects</a>
             <a class="linkAbout" href="#about">about</a>
             <a class="linkContact" href="#contact">contact</a>
         </div>
     </nav>
-    <main class="projects" id="projects">
-        <section class="leftCol">
-            <div class="pageTitles">
-                <a href="#kdz">Rabies Prophylaxis</a>
-                <a href="#tdAlg">Tetanus Prophylaxis</a>
-                <a href="#esaCalculator">ESA Calculator</a>
-                <a href="#mathGame">Math Game</a>
-                <a href="#clickingGame">Fast Click Game</a>
-                <a href="#listApp">List App</a>
-                <a href="#physicsSimulation">Physics Simulation</a>
-            </div>
-        </section>
-        <section class="midCol">
+    <nav class="leftNav">
+        <div class="pageTitles">
+            <a href="#kdz">Rabies Prophylaxis</a>
+            <a href="#tdAlg">Tetanus Prophylaxis</a>
+            <a href="#esaCalculator">ESA Calculator</a>
+            <a href="#mathGame">Math Game</a>
+            <a href="#clickingGame">Fast Click Game</a>
+            <a href="#listApp">List App</a>
+            <a href="#physicsSimulation">Physics Simulation</a>
+        </div>
+    </nav> -->
+    <main>
+        <article class="projects" id="projects">
             <h1 class="titleMyProjects">My Projects</h1>
             <div class="kdz project" id="kdz">
-                <div class="h">
-                    <h3><a href="https://drot2579.github.io/kdz/" target="_blank">Rabies Profilaxis App</a></h3>
-                </div>
+                <h3><a href="https://drot2579.github.io/kdz/" target="_blank">Rabies Profilaxis App</a></h3>
                 <p>Ministry of Heath of Turkey has a rabies guideline booklet that describes approptiate approches for
                     patients suspected of a rabies virus exposure. Post exposure profilaxis(PEP) is the most important
                     part. While this booklet has a summary table for PEP as well as an algorithmic diagram, in my
@@ -69,13 +66,6 @@
                     mostly in English. </p>
                 <img src="./src/ss_app_kdz.png" alt="Rabies algorithm app screenshot">
             </div>
-            <div class="td project" id="tdAlg">
-                <h3><a href="https://drot2579.github.io/td/" target="_blank">Tetanus Profilaxis App</a></h3>
-                <p>Like the rabies app this app takes to the recommended treatment with answering a question in each
-                    step. Rabies prophylaxis is much more complex than this one. This one has a relaxing fade-out-in
-                    animation. Content is in Turkish.</p>
-                <img src="./src/ss_app_td.png" alt="Tetanus algorithm app screenshot">
-            </div>
             <div class="mathGame project" id="mathGame">
                 <h3><a href="https://drot2579.github.io/mathGame1/" target="_blank">Basic Math Game</a></h3>
                 <p>This was my first small project. In each level, the sum of 2 random numbers between a predetermined
@@ -85,6 +75,26 @@
                     when game is not being played. </p>
                 <img src="./src/ss_app_mathGame.png" alt="Math Game screenshot">
             </div>
+            <div class="listApp project" id="listApp">
+                <h3><a href="https://drot2579.github.io/listApp/" target="_blank"> List App </a></h3>
+                <p>Basic list app</p>
+                <img src="./src/ss_app_listApp.png" alt="List app screenshot">
+            </div>
+
+            <div class="td project" id="tdAlg">
+                <h3><a href="https://drot2579.github.io/td/" target="_blank">Tetanus Profilaxis App</a></h3>
+                <p>Like the rabies app this app takes to the recommended treatment with answering a question in each
+                    step. Rabies prophylaxis is much more complex than this one. This one has a relaxing fade-out-in
+                    animation. Content is in Turkish.</p>
+                <img src="./src/ss_app_td.png" alt="Tetanus algorithm app screenshot">
+            </div>
+            <div class="clickingGame project" id="clickingGame">
+                <h3><a href="https://drot2579.github.io/clickingGame/" target="_blank"> Fast Click Game </a></h3>
+                <p>Click the box before it turns red, or everyone dies...</p>
+                <img src="./src/ss_app_clickingGame.png" alt="Clicking game screenshot">
+            </div>
+
+
             <div class="esaCalculator project" id="esaCalculator">
                 <h3><a href="https://drot2579.github.io/esa/" target="_blank">ESA Drug Dose Calculator</a></h3>
                 <p>Erytropoesis Stimulating Agents(ESA) are used for the anemia in chronic renal disease patients. There
@@ -100,52 +110,47 @@
                 <p>I looked into the canvas tag and I tought I could make a Newton mechanics(F = m.a) simulator. It is
                     aimed to be realistic calculation-wise, for example an object fall from 80 meters in 4 seconds in
                     accordance with:</p>
-                <code> X = (1/2)*(a.t^2) ; a = g = 10 m/(s^2)  </code>
-                <code>  80 = (10/2)*(t^2) ; 16 = (t^2) ; t = 4 </code>
+                <code> X = (1/2)*(a.t^2)  </code>
+                <code>  a = g = 10 m/(s^2)  </code>
+                <code>  80 = (10/2)*(t^2)  </code>
+                <code>  16 = (t^2) ; t = 4 </code>
                 <p>Not compatible with mobile devices. Uses keyboard input.</p>
                 <img src="./src/ss_app_physicsSim.png" alt="Physics simulator app screenshot">
             </div>
-            <div class="listApp project" id="listApp">
-                <h3><a href="https://drot2579.github.io/listApp/" target="_blank"> List App </a></h3>
-                <p>Basic list app</p>
-                <img src="./src/ss_app_listApp.png" alt="List app screenshot">
+
+        </article>
+        <!-- 
+            <article class="about" id="about">
+            <h1>About Me</h1>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ipsa recusandae, neque fugiat esse
+                    cupiditate ratione sequi temporibus ipsum itaque obcaecati libero eligendi consequatur ullam, soluta
+                    labore cumque hic repellat? Minus ipsam, dolorem illum architecto rem ducimus voluptates ut
+                    reprehenderit dicta commodi dignissimos excepturi placeat iure nesciunt earum sunt assumenda, sequi
+                    quis adipisci quasi, quod velit quisquam odit. Dignissimos, consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eos assumenda odio vero maxime!
+                    Temporibus modi quia consequatur molestiae aliquid odio iure ut a voluptatum magnam. Quia dolorem
+                    accusantium nesciunt.</p>
             </div>
-            <div class="clickingGame project" id="clickingGame">
-                <h3><a href="https://drot2579.github.io/clickingGame/" target="_blank"> Fast Click Game </a></h3>
-                <p>Click the box before it turns red, or everyone dies...</p>
-                <img src="./src/ss_app_clickingGame.png" alt="Clicking game screenshot">
+        </article>
+        <article class="contact" id="contact">
+            <h1>Contact Info</h1>
+            <div class="contactInfos">
+                <div class="contactLine"><b>Mail</b><span>myemailaddress@mymail.com</span></div>
+                <div class="contactLine"><b>GitHub </b><span><a
+                            href="github.com/drot2579/">github.com/drot2579/</a></span></div>
             </div>
-            <div class="about" id="about">
-                <h1>About Me</h1>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ipsa recusandae, neque fugiat esse
-                        cupiditate ratione sequi temporibus ipsum itaque obcaecati libero eligendi consequatur ullam,
-                        soluta labore cumque hic repellat? Minus ipsam, dolorem illum architecto rem ducimus voluptates
-                        ut reprehenderit dicta commodi dignissimos excepturi placeat iure nesciunt earum sunt assumenda,
-                        sequi quis adipisci quasi, quod velit quisquam odit. Dignissimos, consequuntur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eos assumenda odio vero maxime!
-                        Temporibus modi quia consequatur molestiae aliquid odio iure ut a voluptatum magnam. Quia
-                        dolorem accusantium nesciunt.</p>
-                </div>
-            </div>
-            <div class="contact" id="contact">
-                <h1>Contact Info</h1>
-                <div class="contactInfos">
-                    <div class="contactLine"><b>Mail</b><span>myemailaddress@mymail.com</span></div>
-                    <div class="contactLine"><b>GitHub </b><span><a href="github.com/drot2579/">github.com/drot2579/</a></span></div>
-                </div>
-            </div>
-        </section>
-        <section class="rightCol">
-        </section>
+        </article> -->
     </main>
+    <!-- <nav class="rightNav"></nav>
     <footer>
         <section class="footerLeft">
-            <h4>Technical</h4>
+            <h4>Legal</h4>
             <ul>
                 <li><a href="">Lorem</a></li>
                 <li><a href="">Ipsum</a></li>
                 <li><a href="">Dolor</a></li>
+                <li><a href="">Sit amet</a></li>
             </ul>
         </section>
         <div class="verticalLine"></div>
@@ -157,6 +162,6 @@
                 <li><a href="">Molestiae</a></li>
             </ul>
         </section>
-    </footer>
+    </footer> -->
 </body>
 </html>
