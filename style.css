@@ -1,5 +1,5 @@
 html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'SEDAN SC' ,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f1f1f1;
     scroll-behavior: smooth;
     scrollbar-width: thin;
@@ -11,8 +11,8 @@ figcaption {
 }
 .hero {}
 .heroImage {
-    background: linear-gradient(0deg, #f1f1f1, #f1f1f125),
-        linear-gradient(90deg, #f1f1f1, #f1f1f125),
+    background: linear-gradient(0deg, #f1f1f1cc 240px , #f1f1f125),
+        linear-gradient(90deg, #f1f1f1dd 240px, #f1f1f125),
         url("./src/pexels-itsehsanh-18765298.jpg") fixed;
     height: calc(100vh - 4rem);
     position: relative;
@@ -21,13 +21,13 @@ figcaption {
     z-index: 2;
     color: #111;
     text-align: center;
-    bottom: 14%;
+    bottom: max(14%,4.25rem);
     left: 4%;
     position: absolute;
     & h2 {
         padding: 0;
         text-transform: none;
-        font-family: Consolas, 'Courier New', Courier, monospace;
+        /* font-family: Consolas, 'Courier New', Courier, monospace; */
         font-size: 7rem;
         line-height: 0.8;
         color: #ff8400;
@@ -44,7 +44,7 @@ main {
     background-attachment: fixed;
 }
 .topNav {
-    background-color: #f1f1f1;
+    background-color: #f9f9f9;
     height: 4rem;
     display: flex;
     position: sticky;
@@ -106,25 +106,36 @@ main {
         padding: 5vh 2vw;
         padding-bottom: 8vh;
         background-color: #fafafa;
+        & p {
+            font-family: Lato,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+        }
+        & li {
+            font-family: Lato,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 0.75rem;
+            
+        }
     }
     & ul {
         list-style: disc;
-        margin: 0.5rem 2rem;
+        margin: 0.5rem 2.5rem;
+
     }
     & .leftCol {
-        padding: 2rem 1rem;
-        margin-bottom: 3rem;
-        margin-top: 20dvh;
+        padding: 0rem 0.5rem;
+        margin-top: 40dvh;
         display: flex;
         flex-direction: column;
         & .pageTitles {
             position: sticky;
             z-index: 1;
-            top: 30%;
+            top: 20%;
             display: flex;
             flex-direction: column;
             align-items: center;
             color: #000;
+            overflow-y: auto;
+            height: 70dvh;
             & a {
                 width: 90%;
                 min-width: 4rem;
@@ -140,8 +151,11 @@ main {
     }
     & .rightCol {}
     & .midCol {
-        & a:hover {
+        & a {
             text-decoration: underline;
+            &:hover {
+                text-decoration-color: orange;
+            }
         }
         padding: 0 4vw;
         & p {
@@ -228,39 +242,44 @@ footer {
         display: unset;
     }
     .heroImage {
-        background-position: bottom 55% left 20%;
-    }
-    .leftCol.show {
-        display: unset;
-        position: sticky;
-        width: min(40%, 240px);
-        height: 100vh;
-        left: 0;
-        top: 4rem;
-        background-color: #f4f4f4;
-        z-index: 3;
-    }
-}
-@media screen and (width < 600px) {
-    html {
-        font-size: 15px;
-    }
-    .project {
-        background-color: #fafafa !important;
-    }
-    .projects {
-        background-position: center !important;
+        background-position: bottom 55% left 40%;
     }
     .midCol {
         padding: 0 !important;
     }
-    .leftCol {
-        padding: 0 !important;
+    main {
+        background-position: center;
+    }
+    
+    .leftCol.show {
+        display: unset;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        width: min(40%, 240px);
+        height: 100dvh;
+        left: 0;
+        top: 0rem;
+        background-color: #f4f4f4;
+        z-index: 3;
         & a {
-            width: 100% !important;
+            width: 100%;
         }
     }
 }
+@media screen and (width > 600px) {
+html {
+    font-size: 16px;
+}
+}
+@media screen and (width > 800px) {
+html {
+    font-size: 17px;
+}
+}
 body * {
     /* border: 1px dotted; */
+}
+.project {
+    /* display: none; */
 }
