@@ -1,5 +1,3 @@
-
-
 /*#region ----------------- RESET ------------------  */
 *,
 *::before,
@@ -22,35 +20,6 @@ html {
 /*#endregion ----------------- RESET ------------------  */
 /* ---------- ---------- ---------- -------- ---------- ---------- ---------- */
 /*#region ---------- ----------* MY CONFIG *---------- ---------- ----- */
-table {
-    --hh: 90;
-    --ss: 66%;
-    --ll: 6%;
-    --tbClr1: hsl(var(--hh), var(--ss), calc(100% - var(--ll) * 1));
-    --tbClr2: hsl(var(--hh), var(--ss), calc(100% - var(--ll) * 2));
-    --tbClr3: hsl(var(--hh), var(--ss), calc(100% - var(--ll) * 3));
-    --tbClr4: hsl(var(--hh), var(--ss), calc(100% - var(--ll) * 5));
-    background-color: #444;
-    & td,
-    & th {
-        padding: 0.5rem;
-    }
-    tr:nth-child(odd) {
-        background-color: var(--tbClr1);
-    }
-    tr:nth-child(even) {
-        background-color: var(--tbClr2);
-    }
-    & thead th {
-        background-color: var(--tbClr4);
-    }
-    & tfoot td {
-        background-color: var(--tbClr3);
-    }
-    & tbody tr:hover {
-        filter: brightness(0.8);
-    }
-}
 h1 {
     font-size: 2.50rem;
 }
@@ -69,7 +38,7 @@ h5 {
 h6 {
     font-size: 1.25rem;
 }
-*:where(h1,h2,h3,h4,h5,h6) {
+*:where(h1, h2, h3, h4, h5, h6) {
     font-weight: 400;
     padding: 0.5em 0;
 }
@@ -91,7 +60,5 @@ a:visited, a:hover {
 }
 button {
     cursor: pointer;
-
 }
-
 /*#endregion ---------- ----------* MY CONFIG *---------- ---------- ----- */
